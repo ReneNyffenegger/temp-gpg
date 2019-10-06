@@ -1,3 +1,6 @@
+Passpharse is: abcd
+
+
 Encrypt:
 
    gpg -c Document.txt
@@ -17,3 +20,7 @@ Encrypt an entire directory
 Show content of encrypted directory
 
    gpgtar --list-archive dir.pgp
+
+Extract encrypted directory to current directory:
+
+   gpgtar -d -C . dir.pgp
