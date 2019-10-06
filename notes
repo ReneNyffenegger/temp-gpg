@@ -24,3 +24,7 @@ Show content of encrypted directory
 Extract encrypted directory to current directory:
 
    gpgtar -d -C . dir.pgp
+
+Show session key (and decrypt file)
+
+   gpg --show-session-key Document.txt.gpg
