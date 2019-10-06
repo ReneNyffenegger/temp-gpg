@@ -10,6 +10,10 @@ Show something:
 
    gpg --list-packets -vv --show-session-key Document.txt.gpg
 
-An entire directory
+Encrypt an entire directory
 
-   gpgtar --create -c -o dir.pgp dir
+   gpgtar -c -o dir.pgp dir
+
+Show content of encrypted directory
+
+   gpgtar --list-archive dir.pgp
