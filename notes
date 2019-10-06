@@ -1,8 +1,15 @@
 Encrypt:
-  gpg -c Document.txt
+
+   gpg -c Document.txt
 
 Decrypt
-  gpg -d Document.txt.gpg
+
+   gpg -d Document.txt.gpg
 
 Show something:
+
    gpg --list-packets -vv --show-session-key Document.txt.gpg
+
+An entire directory
+
+   gpgtar --create -c -o dir.pgp dir
