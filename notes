@@ -28,3 +28,8 @@ Extract encrypted directory to current directory:
 Show session key (and decrypt file)
 
    gpg --show-session-key Document.txt.gpg
+
+Get someone's preferred symetric cypher
+   darkcoding.net/software/how-gpg-works-encrypt/
+
+   gpg --recv-keys 0x127CFCD9B3B929D2
