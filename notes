@@ -1,5 +1,4 @@
-Passpharse is: abcd
-
+Passphrase is: abcd
 
 Encrypt:
 
@@ -7,7 +6,15 @@ Encrypt:
 
 Decrypt
 
-   gpg -d Document.txt.gpg
+   
+   By default, decrypts to STDOUT:
+
+      gpg -d                 Document.txt.gpg
+
+   Use -o to specify file:
+
+      gpg -d -o Document.txt Document.txt.gpg
+
 
 Show something:
 
@@ -16,6 +23,15 @@ Show something:
 Encrypt an entire directory
 
    gpgtar -c -o dir.pgp dir
+
+List contents of directory
+
+   gpgtar -t dir.pgp
+
+Decrypt directory
+
+   gpgtar -d      dir.pgp      (extracts to dir_1_ or so)
+   gpgtar -d -C . dir.pgp      (creates dir directory directly underneath)
 
 Show content of encrypted directory
 
