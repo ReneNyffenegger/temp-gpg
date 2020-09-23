@@ -1,8 +1,10 @@
 Passphrase is: abcd
 
-Encrypt:
+Encrypt symmetrically
 
    gpg -c Document.txt
+
+  (the option -c encrypts a file symmetrically)
 
 Decrypt
 
@@ -15,6 +17,11 @@ Decrypt
 
       gpg -d -o Document.txt Document.txt.gpg
 
+On batch
+
+   gpg -c --batch --yes --passphrase "one two three" another-Document.txt
+
+   gpg -d --batch --yes --passphrase "one two three" -o another-Document.txt2 another-Document.txt.gpg
 
 Show something:
 
