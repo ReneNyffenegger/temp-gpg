@@ -1,11 +1,21 @@
 Passphrase is: abcd
 
-Encrypt symmetrically
+{ symmetrically
 
-   gpg -c Document.txt
+   --
+   -- the option -c encrypts a file symmetrically:
+   --
+   gpg -c document-to-be-encrypted-symmetrically.txt
+   rm document-to-be-encrypted-symmetrically.txt
 
-  (the option -c encrypts a file symmetrically)
+   --
+   -- Decrypt the file again
 
+   gpg -d -o document-to-be-encrypted-symmetrically.txt document-to-be-encrypted-symmetrically.txt.gpg
+
+
+
+}
 Decrypt
 
    
