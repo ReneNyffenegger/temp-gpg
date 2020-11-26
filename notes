@@ -33,14 +33,28 @@ On batch
 
    gpg -d --batch --yes --passphrase "one two three" -o another-Document.txt2 another-Document.txt.gpg
 
-Umlauts / https://superuser.com/questions/1605256/what-do-i-have-to-do-in-cmd-exe-and-or-powershell-to-specify-a-file-o-with-um?noredirect=1 {
+{ Umlauts / https://superuser.com/questions/1605256/what-do-i-have-to-do-in-cmd-exe-and-or-powershell-to-specify-a-file-o-with-um?noredirect=1
 
    gpg -c --batch --yes --passphrase "one two three" -o bärlauch.gpg bärlauch.txt
    rm bärlauch.txt
+
    gpg -d --batch --yes --passphrase "one two three" -o bärlauch.txt bärlauch.gpg
+#  gpg -d --batch --yes --passphrase "one two three" --enable-special-filenames -o bärlauch.txt bärlauch.gpg
+
    mv b*rlauch.txt bärlauch.txt
    rm bärlauch.gpg
 
+}
+{ --embedded-filename
+
+   gpg -c --batch --yes --passphrase "one two three" --use-embedded-filename  bärlauch.txt
+
+   rm bärlauch.txt
+
+   gpg -d --batch --yes --passphrase "one two three" --use-embedded-filename bärlauch.txt.gpg
+
+   mv b*rlauch.txt bärlauch.txt
+   rm bärlauch.gpg
 }
 
 
