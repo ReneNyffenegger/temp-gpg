@@ -29,9 +29,21 @@ Decrypt
 
 On batch
 
-   gpg -c --batch --yes --passphrase "one two three" another-Document.txt
+   gpg -c --batch --yes --passphrase "one two three"                      another-Document.txt
 
    gpg -d --batch --yes --passphrase "one two three" -o another-Document.txt2 another-Document.txt.gpg
+
+Umlauts / https://superuser.com/questions/1605256/what-do-i-have-to-do-in-cmd-exe-and-or-powershell-to-specify-a-file-o-with-um?noredirect=1 {
+
+   gpg -c --batch --yes --passphrase "one two three" -o bärlauch.gpg bärlauch.txt
+   rm bärlauch.txt
+   gpg -d --batch --yes --passphrase "one two three" -o bärlauch.txt bärlauch.gpg
+   mv b*rlauch.txt bärlauch.txt
+   rm bärlauch.gpg
+
+}
+
+
 
 Show something:
 
